@@ -10,9 +10,10 @@ function myButtonClicked () {
   const height = parseInt(document.getElementById("height-of-cone").value)
 
   // process
-  const volume = 1/3 * (Math.PI) * (radius * radius) * height
-  // const volume = radius + height // not proper forumla, using to see if process works
+  const volume = (Math.PI * radius ** 2 * height) / 3.0
+  const surfaceArea = Math.PI * radius * (radius + (Math.sqrt(height ** 2 + radius ** 2))) 
 
   // output
-  document.getElementById("volume-of-cone").innerHTML = volume.toFixed() + " cm²"
+  document.getElementById("volume-of-cone").innerHTML = volume.toFixed(2) + " cm³"
+  document.getElementById("surface-area-of-cone").innerHTML = surfaceArea.toFixed(2) + " cm²"
 }
