@@ -23,3 +23,7 @@ body {
   display: table;
   clear: both;
 }
+
+.surface-area-formula {
+  width: 300px;
+}
